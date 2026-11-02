@@ -1,0 +1,207 @@
+/* Reseteo y Accesibilidad WCAG (Fuente Sans-Serif y Contraste Adecuado) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Navegación Fija */
+.navbar {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar nav a:hover {
+  color: #38bdf8;
+}
+
+/* Hero Section (Patrón Z / Jerarquía Visual) */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a, #0284c7);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+/* Ley de Fitts: Botón CTA amplio y fácilmente cliqueable */
+.btn-cta {
+  display: inline-block;
+  background-color: #f59e0b;
+  color: #0f172a;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-cta:hover {
+  background-color: #d97706;
+  transform: translateY(-2px);
+}
+
+/* Estructura y Espaciado (Whitespace / Ley de Miller) */
+.container {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #475569;
+}
+
+/* Grilla de Tarjetas */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card .icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  color: #0284c7;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Formulario con Validaciones */
+.contacto-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #334155;
+}
+
+.form-group input, .form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #0284c7;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0369a1;
+}
+
+/* Estado de Visibilidad (Heurística 1 de Nielsen) */
+.feedback-msg {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.feedback-msg.exito {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}

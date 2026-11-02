@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pallin | Desarrollador y Docente Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN CONSISTENTE (Heurística 4) -->
+  <header class="navbar">
+    <div class="logo">PALLIN</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre Mí</a>
+      <a href="#especialidad">Especialidades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION (Patrón de Escaneo Z + Ley de Fitts) -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Profesor y Desarrollador Web</h1>
+      <p>Especialista en Ofimática, Diseño Gráfico, Animación 2D/3D y Desarrollo Web.</p>
+      <a href="#contacto" class="btn-cta">Pide tu Plantilla Web</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN SOBRE MÍ (Contenido Real / Heurística 2) -->
+  <section id="sobre-mi" class="container">
+    <h2>Sobre Mí</h2>
+    <p class="lead">
+      Docente con amplia experiencia en la enseñanza de informática y diseño. 
+      Especializado en programas de Office, Adobe, Autodesk, animaciones 2D/3D y desarrollo de páginas web.
+    </p>
+  </section>
+
+  <!-- TARJETAS DE ESPECIALIDAD (Ley de Hick & Miller / Corrección de Errores Tipográficos) -->
+  <section id="especialidad" class="container">
+    <h2>Especialidades</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <span class="icon">🎨</span>
+        <h3>Diseño Gráfico Digital</h3>
+        <p>Creación de identidad visual, branding y piezas publicitarias profesionales.</p>
+      </div>
+      <div class="card">
+        <span class="icon">📊</span>
+        <h3>Especialista en Excel</h3>
+        <p>Dominio avanzado de hojas de cálculo, análisis y automatización de datos.</p>
+      </div>
+      <div class="card">
+        <span class="icon">💻</span>
+        <h3>Diseño y Programación Web</h3>
+        <p>Construcción de sitios web modernos, responsivos e intuitivos.</p>
+      </div>
+      <div class="card">
+        <span class="icon">📐</span>
+        <h3>Especialista en Autodesk</h3>
+        <p>Modelado, diseño técnico y desarrollo de proyectos en 2D y 3D.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO (Prevención de Errores H5 + Retroalimentación H1) -->
+  <section id="contacto" class="container contacto-box">
+    <h2>Contacto e Informes</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="nombre">Nombre Completo *</label>
+        <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo Electrónico *</label>
+        <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono *</label>
+        <input type="tel" id="telefono" placeholder="Ej. 912345678" required>
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Consulta *</label>
+        <textarea id="mensaje" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+      </div>
+      <button type="submit" id="btnEnviar">Enviar Consulta</button>
+      
+      <!-- Mensaje de confirmación en tiempo real -->
+      <div id="feedback" class="feedback-msg hidden"></div>
+    </form>
+  </section>
+
+  <!-- PIE DE PÁGINA PERSONALIZADO -->
+  <footer>
+    <p>Gary Cristobal — Todos los derechos reservados © 2026</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
